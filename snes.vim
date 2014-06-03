@@ -11,13 +11,13 @@ endif
 
 syn case ignore
 
-if version < 600
-  so <sfile>:p:h/base_snes_syntax.vim
-else
+if version > 600
   runtime! syntax/base_snes_syntax.vim
   if exists("b:current_syntax")
     unlet b:current_syntax
   endif
+else
+  so <sfile>:p:h/base_snes_syntax.vim
 endif
 
 syn keyword asm65Reg x y a s
@@ -31,18 +31,18 @@ syn keyword asmGsuOps add alt1 alt2 alt3 asr bge bic blt cache cmode color div2 
 syn keyword asmGsuReg r0 r1 r2 r3 r4 r5 r6 r7 r8 r9 r10 r11 r12 r13 r14 r15 sp lr pc
 
 if version >= 508 || !exists("did_snes_syntax_inits")
-  if version < 508
+  if version > 508
+    command -nargs=+ HiLink hi def link <args>
+  else
     let did_snes_syntax_inits = 1
     command -nargs=+ HiLink hi link <args>
-  else
-    command -nargs=+ HiLink hi def link <args>
   endif
   
   HiLink asm65Reg		Identifier
   HiLink asmGsuReg		Identifier
   
-  HiLink asm65816Ops	Instruction
-  HiLink asmGsuOps		Instruction
+  HiLink asm65816Ops	Function
+  HiLink asmGsuOps		Function
   
   delcommand HiLink
 endif

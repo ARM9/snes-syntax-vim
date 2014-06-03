@@ -9,7 +9,7 @@ endif
 
 syn match asmNumericOperator "[+-/*<>=&|^!#]"
 
-syn match asmLabel "[~_]\{0,2\}[a-z_]\w*:\?"
+syn match asmLabel "\%(@\|[~_]\{0,2\}\)[a-z_]\w*:\?"
 
 syn match asmComment ";.*$"
 
@@ -26,7 +26,7 @@ syn match asmNumbers "[<>]\?\(\$\x\+\|\d\+\|%[01]\+\|[0-9]\x*h\)\>"
 hi link asmNumericOperator Number
 hi link asmNumbers Number
 
-hi link asmLabel        Label
+hi link asmLabel        Keyword
 hi link asmDirective	Directive
 hi link asmString       String
 hi link asmStringSingle String
