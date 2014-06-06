@@ -9,7 +9,7 @@ endif
 
 syn match asmNumericOperator "[+-/*<>=&|^!#]"
 
-syn match asmLabel "\%(@\|[~_]\{0,2\}\)[a-z_]\w*:\?"
+syn match asmLabel "\(@\|[~_]\{0,2\}\)[a-z_]\w*:\?"
 
 syn match asmComment ";.*$"
 
