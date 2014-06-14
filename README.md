@@ -4,7 +4,7 @@ May or may not work with your prefered theme, these were designed for a slightly
 
 ### Installing
 Put the four .vim files in /syntax into your vimfiles/syntax directory.
-- or with Pathogen -
+** or with Pathogen**
 Clone this repo into your ~/vimfiles/bundle directory.
 
 ### Using
