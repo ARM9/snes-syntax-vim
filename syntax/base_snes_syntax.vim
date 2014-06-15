@@ -27,7 +27,7 @@ hi link asmNumericOperator Number
 hi link asmNumbers Number
 
 hi link asmLabel        Keyword
-hi link asmDirective	Directive
+hi link asmDirective	PreProc
 hi link asmString       String
 hi link asmStringSingle String
 hi link asmComment      Comment
