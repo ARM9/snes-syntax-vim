@@ -38,8 +38,8 @@ if version >= 508 || !exists("did_snes_syntax_inits")
     command -nargs=+ HiLink hi link <args>
   endif
   
-  HiLink asm65Reg		Identifier
-  HiLink asmGsuReg		Identifier
+  HiLink asm65Reg		Type
+  HiLink asmGsuReg		Type
   
   HiLink asm65816Ops	Function
   HiLink asmGsuOps		Function
