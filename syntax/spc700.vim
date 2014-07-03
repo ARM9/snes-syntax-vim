@@ -32,7 +32,7 @@ if version >= 508 || !exists("did_spc700_syntax_inits")
     command -nargs=+ HiLink hi link <args>
   endif
   
-  HiLink asmSpc700Reg	Identifier
+  HiLink asmSpc700Reg	Type
   
   HiLink asmSpc700Ops	Function
   

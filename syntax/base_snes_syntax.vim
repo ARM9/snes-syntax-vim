@@ -9,6 +9,10 @@ endif
 
 syn match snesNumericOperator "[+-/*<>=&|^!#]"
 
+syn match snesNumbers "[<>]\?\(\$\x\+\|\d\+\|%[01]\+\|[0-9]\x*h\)\>"
+
+syn match snesDirective "\.\w\+\>"
+
 syn match snesLabel "\(@\|[~_]\{0,2\}\)[a-z_]\w*:\?"
 
 syn match snesLineComment ";.*$"
@@ -18,15 +22,12 @@ syn keyword snesTodo	contained todo fixme xxx warning danger note notice bug aut
 syn region snesString		start="\"" skip=+\\"+ end="\"\|$"
 syn region snesStringSingle	start="'" skip=+\\'+ end="'\|$"
 
-syn match snesDirective "\.\w\+\>"
-
-syn match snesNumbers "[<>]\?\(\$\x\+\|\d\+\|%[01]\+\|[0-9]\x*h\)\>"
 
 
 hi link snesNumericOperator Number
 hi link snesNumbers Number
 
-hi link snesLabel			Keyword
+hi link snesLabel			Label
 hi link snesDirective		PreProc
 hi link snesString			String
 hi link snesStringSingle	String

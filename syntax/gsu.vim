@@ -32,7 +32,7 @@ if version >= 508 || !exists("did_gsu_syntax_inits")
     command -nargs=+ HiLink hi link <args>
   endif
   
-  HiLink asmGsuReg		Identifier
+  HiLink asmGsuReg		Type
   
   HiLink asmGsuOps		Function
   
