@@ -3,10 +3,6 @@
 " Version 0.1
 " Maintainer: ARM9
 
-if exists("b:current_syntax")
-  finish
-endif
-
 syn match snesNumericOperator "[+-/*<>=&|^!#]"
 
 syn match snesNumbers "[<>]\?\(\$\x\+\|\d\+\|%[01]\+\|[0-9]\x*h\)\>"
