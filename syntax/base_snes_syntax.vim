@@ -5,11 +5,11 @@
 
 syn match snesNumericOperator "[+-/*<>=&|^!#]"
 
-syn match snesNumbers "[<>]\?\(\$\x\+\|\d\+\|%[01]\+\|[0-9]\x*h\)\>"
+syn match snesNumbers "\%(\$\x\+\|\d\+\|%[01]\+\|[0-9]\x*h\)\>"
 
 syn match snesDirective "\.\w\+\>"
 
-syn match snesLabel "\(@\|[~_]\{0,2\}\)[a-z_]\w*:\?"
+syn match snesLabel "\%(@\|[~_]\{0,2\}\)[a-z_]\w*:\?"
 
 syn match snesLineComment ";.*$"
 
