@@ -14,7 +14,7 @@ In your .vimrc:
 ```
 au BufNewFile,BufRead *.asm,*.inc set filetype=snes
 ```
-and/or put this line at the top of your assembly file(s):
+and/or put this line near the top or bottom of your assembly file(s):
 ```
 ; vim: ft=name
 ```
