@@ -18,7 +18,8 @@ syn match bassNumbers "\%(\$\x\+\|0x\x\+\|\d\+\|%[01]\+\|0b[01]\+\|0o[0-7]\+\)\>
 syn match bassLabel "\<[_a-z][_a-z0-9.]*:\?"
 
 " syn match bassDirective "\<[_a-z]\w*\>"
-syn keyword bassDirective arch base constant db dd define defined dl dq dw else endian error evaluate fill global if include insert macro map notice origin output print pull push putchar scope variable warning while
+syn keyword bassDirective arch base constant db dd define defined dl dq dw else endian error evaluate fill global include insert macro map notice origin output print pull push putchar scope variable warning while
+" todo: fix if keyword so multiline comment if 0 { works
 
 syn match bassLineComment	"//.*$"
 syn region bassComment		start="if 0 {" skip="//.*$" end="}"
