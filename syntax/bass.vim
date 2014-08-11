@@ -18,11 +18,12 @@ syn match bassNumbers "\%(\$\x\+\|0x\x\+\|\d\+\|%[01]\+\|0b[01]\+\|0o[0-7]\+\)\>
 syn match bassLabel "\<[_a-z][_a-z0-9.]*:\?"
 
 " syn match bassDirective "\<[_a-z]\w*\>"
+syn keyword bassDirective arch base constant db dd define defined dl dq dw else endian error evaluate fill global if include insert macro map notice origin output print pull push putchar scope variable warning while
 
 syn match bassLineComment	"//.*$"
 syn region bassComment		start="if 0 {" skip="//.*$" end="}"
 
-syn keyword bassTodo	contained todo fixme xxx warning danger note notice bug author date
+syn keyword bassTodo	contained todo fixme xxx danger note notice bug author date
 
 syn region bassString		start="\"" skip=+\\"+ end="\"\|$"
 syn region bassStringSingle	start="'" skip=+\\'+ end="'\|$"
@@ -43,7 +44,7 @@ if version >= 508 || !exists("did_bass_syntax_inits")
   HiLink bassNumbers Number
   
   HiLink bassLabel			Label
-" HiLink bassDirective		PreProc
+  HiLink bassDirective		Identifier
   HiLink bassString			String
   HiLink bassStringSingle	String
   HiLink bassLineComment	Comment
