@@ -1,7 +1,8 @@
 Syntax highlighting for 65816, spc700 and SuperFX assembly, for the vim text editor.
 
 ### Installing
-__with Pathogen__
+Copy /syntax into ~/.vim
+__or with Pathogen__
 Clone this repo into your ~/.vim/bundle directory.
 ```
 git clone https://github.com/ARM9/snes-syntax-vim.git
