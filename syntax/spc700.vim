@@ -11,16 +11,8 @@ endif
 
 syn case ignore
 
-if version > 600
-  runtime! syntax/base_snes_syntax.vim
-  if exists("b:current_syntax")
-    unlet b:current_syntax
-  endif
-else
-  so <sfile>:p:h/base_snes_syntax.vim
-endif
-
-so <sfile>:p:h/instr_spc700.vim
+so <sfile>:p:h/include/base_snes_syntax.vim
+so <sfile>:p:h/include/instr_spc700.vim
 
 if version >= 508 || !exists("did_spc700_syntax_inits")
   if version > 508
@@ -30,8 +22,8 @@ if version >= 508 || !exists("did_spc700_syntax_inits")
     command -nargs=+ HiLink hi link <args>
   endif
   
-  HiLink asmSpc700Reg	Type
-  HiLink asmSpc700Ops	Function
+  HiLink asmSpc700Reg   Type
+  HiLink asmSpc700Ops   Function
   
   delcommand HiLink
 endif
