@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language: 65816, spc700 and SuperFX assembly, for ca65, wdc816as
+" Language: 65816, spc700 and SuperFX assembly, for ca65, wdc816as, bass
 " Version 0.1
 " Maintainer: ARM9
 
@@ -11,7 +11,10 @@ endif
 
 syn case ignore
 
-so <sfile>:p:h/include/base_snes_syntax.vim
+" change include to your assembler
+" so <sfile>:p:h/include/ca65.vim
+so <sfile>:p:h/include/bass.vim
+
 so <sfile>:p:h/include/instr_65816.vim
 so <sfile>:p:h/include/instr_spc700.vim
 so <sfile>:p:h/include/instr_gsu.vim
@@ -23,6 +26,15 @@ if version >= 508 || !exists("did_snes_syntax_inits")
     let did_snes_syntax_inits = 1
     command -nargs=+ HiLink hi link <args>
   endif
+  HiLink snesNumericOperator Operator
+  HiLink snesNumbers         Number
+
+  HiLink snesLabel           Label
+  HiLink snesDirective       Identifier
+" PreProc
+  HiLink snesString          String
+  HiLink snesComment         Comment
+  HiLink snesTodo            Todo
 
   HiLink asm65Reg       Type
   HiLink asm65816Ops    Function

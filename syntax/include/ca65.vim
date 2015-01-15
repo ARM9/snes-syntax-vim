@@ -18,13 +18,3 @@ syn match snesComment ";.*$" contains=snesTodo
 syn region snesString start="\""  skip=+\\"+ end="\"\|$"
 syn region snesString start="'"   skip=+\\'+ end="'\|$"
 
-
-hi link snesNumericOperator Operator
-hi link snesNumbers         Number
-
-hi link snesLabel           Label
-hi link snesDirective       PreProc
-hi link snesString          String
-hi link snesComment         Comment
-hi link snesTodo            Todo
-
