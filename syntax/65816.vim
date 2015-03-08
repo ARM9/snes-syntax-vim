@@ -11,7 +11,7 @@ endif
 
 syn case ignore
 
-so <sfile>:p:h/include/base_snes_syntax.vim
+so <sfile>:p:h/include/bass.vim
 so <sfile>:p:h/include/instr_65816.vim
 
 if version >= 508 || !exists("did_65816_syntax_inits")
@@ -21,6 +21,15 @@ if version >= 508 || !exists("did_65816_syntax_inits")
     let did_65816_syntax_inits = 1
     command -nargs=+ HiLink hi link <args>
   endif
+  HiLink snesNumericOperator Operator
+  HiLink snesNumbers         Number
+
+  HiLink snesLabel           Label
+  HiLink snesDirective       Identifier
+" PreProc
+  HiLink snesString          String
+  HiLink snesComment         Comment
+  HiLink snesTodo            Todo
   
   HiLink asm65Reg       Type
   HiLink asm65816Ops    Function
