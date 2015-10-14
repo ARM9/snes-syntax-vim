@@ -3,6 +3,8 @@
 " Version 0.1
 " Maintainer: ARM9
 
+setlocal iskeyword  +=.,_
+
 syn keyword snesTodo    contained todo fixme xxx warning danger note notice bug author date
 
 syn match snesNumericOperator "[#+-/*<>=&|^~!?]"
