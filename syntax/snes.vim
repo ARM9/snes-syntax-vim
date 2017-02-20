@@ -12,8 +12,8 @@ endif
 syn case ignore
 
 " change include to your assembler
-" so <sfile>:p:h/include/ca65.vim
-so <sfile>:p:h/include/bass.vim
+so <sfile>:p:h/include/ca65.vim
+" so <sfile>:p:h/include/bass.vim
 
 so <sfile>:p:h/include/instr_65816.vim
 so <sfile>:p:h/include/instr_spc700.vim

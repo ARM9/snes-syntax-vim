@@ -11,7 +11,8 @@ endif
 
 syn case ignore
 
-so <sfile>:p:h/include/bass.vim
+"so <sfile>:p:h/include/bass.vim
+so <sfile>:p:h/include/ca65.vim
 so <sfile>:p:h/include/instr_gsu.vim
 
 if version >= 508 || !exists("did_gsu_syntax_inits")
