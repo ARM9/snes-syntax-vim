@@ -9,7 +9,7 @@ syn keyword snesTodo    contained todo fixme xxx warning danger note notice bug 
 
 syn match snesNumericOperator "[#+-/*<>=&|^~!?]"
 
-syn match snesNumbers "\%(\$\x\+\|\d\+\|%[01]\+\|[0-9]\x*h\)\>"
+syn match snesNumbers "\%(\$\x[0-9a-f_]*\|\d[0-9_]*\|%[01][01_]*\|[0-9][0-9a-f_]*h\)\>"
 
 syn match snesDirective "\.\w\+\>"
 
