@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language: 65816 assembly
+" Language: 65816, spc700 and SuperFX assembly, for bass
 " Version 0.1
 " Maintainer: ARM9
 
@@ -11,15 +11,17 @@ endif
 
 syn case ignore
 
-" so <sfile>:p:h/include/bass.vim
-so <sfile>:p:h/include/ca65.vim
-so <sfile>:p:h/include/instr_65816.vim
+so <sfile>:p:h/include/bass.vim
 
-if version >= 508 || !exists("did_65816_syntax_inits")
+so <sfile>:p:h/include/instr_65816.vim
+so <sfile>:p:h/include/instr_spc700.vim
+so <sfile>:p:h/include/instr_gsu.vim
+
+if version >= 508 || !exists("did_snes_bass_syntax_inits")
   if version > 508
     command -nargs=+ HiLink hi def link <args>
   else
-    let did_65816_syntax_inits = 1
+    let did_snes_bass_syntax_inits = 1
     command -nargs=+ HiLink hi link <args>
   endif
   HiLink snesNumericOperator Operator
@@ -31,12 +33,18 @@ if version >= 508 || !exists("did_65816_syntax_inits")
   HiLink snesString          String
   HiLink snesComment         Comment
   HiLink snesTodo            Todo
-  
+
   HiLink asm65Reg       Type
   HiLink asm65816Ops    Function
-  
+
+  HiLink asmSpc700Reg   Type
+  HiLink asmSpc700Ops   Function
+
+  HiLink asmGsuReg      Type
+  HiLink asmGsuOps      Function
+
   delcommand HiLink
 endif
 
-let b:current_syntax="65816"
+let b:current_syntax="snes_bass"
 
