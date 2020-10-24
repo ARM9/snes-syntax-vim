@@ -17,5 +17,6 @@ and/or put this line near the top or bottom of your assembly file(s):
 ```
 ; vim: ft=name
 ```
-Where name is one of the following: 65816, spc700, gsu (for SuperFX) and snes for all of the above.
+Where name is one of the following: 65816, spc700, gsu (for SuperFX) and snes
+for all of the above for ca65, or snes_bass for bass.
 
